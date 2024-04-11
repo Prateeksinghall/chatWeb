@@ -18,7 +18,7 @@ const ProtectedRoute = ({ children }) => {
 function App() {
   return (
     <div className="App bg-[#edf3fc] h-screen flex justify-center items-center">
-      {/* <Routes>
+      <Routes>
         <Route path='/' element={<ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>}></Route>
@@ -28,9 +28,8 @@ function App() {
         <Route path='/sign_in' element={<ProtectedRoute>
           <Form isSignUp={false} />
         </ProtectedRoute>}></Route>
-      </Routes> */}
+      </Routes>
 
-      <h1>Hello World</h1>
     </div>
 
   );
