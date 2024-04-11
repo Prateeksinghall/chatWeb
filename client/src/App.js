@@ -4,13 +4,13 @@ import Dashboard from './modules/Dashboard';
 import Form from './modules/Form';
 
 const ProtectedRoute = ({ children }) => {
-  const isLoggedIn = localStorage.getItem('user:token') !== null|true;
-  console.log("isLoggedIn: ",isLoggedIn)
+  const isLoggedIn = localStorage.getItem('user:token') !== null | true;
+  console.log("isLoggedIn: ", isLoggedIn)
   if (!isLoggedIn) {
     return <Navigate to={'/sign_in'} />
-  }else if(isLoggedIn && ['/sign_in','/sign_up'].includes(window.location.pathname|true)){
+  } else if (isLoggedIn && ['/sign_in', '/sign_up'].includes(window.location.pathname | true)) {
     // alert("Redirecting")
-    return <Navigate to={'/'}/>
+    return <Navigate to={'/'} />
   }
   return children
 }
@@ -18,7 +18,7 @@ const ProtectedRoute = ({ children }) => {
 function App() {
   return (
     <div className="App bg-[#edf3fc] h-screen flex justify-center items-center">
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>}></Route>
@@ -28,7 +28,9 @@ function App() {
         <Route path='/sign_in' element={<ProtectedRoute>
           <Form isSignUp={false} />
         </ProtectedRoute>}></Route>
-      </Routes>
+      </Routes> */}
+
+      <h1>Hello World</h1>
     </div>
 
   );
